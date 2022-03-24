@@ -1,0 +1,27 @@
+CompileFlags:
+  Add:
+    [
+      -Wno-unknown-warning-option,
+      -Wno-unknown-pragmas,
+    ]
+  Remove:
+    [
+    ]
+Diagnostics:
+  Suppress:
+    [
+      -Wgnu-designator,
+    ]
+
+---
+
+If:
+  PathMatch: .*\.h
+CompileFlags:
+  Add:
+    [
+      -include=types.h,
+      -include=defs.h,
+      -include=param.h,
+      -include=mmu.h,
+    ]
